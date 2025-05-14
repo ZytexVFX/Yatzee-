@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzee Game</title>
+    <link href="LittleTwinkel.css" rel="stylesheet">
+</head>
+<body id="yahtzee-body">
+    <header>
+        <h1 id="game-title">YATZEE</h1>
+    </header>
+
+    <main>
+        <section id="game-info">
+            <p id="rolls-left">Worpen over: <span>3</span></p>
+        </section>
+
+        <section id="dice-area">
+            <div id="dice-container">
+                <div class="dice" onclick="toggleHold(0)">?</div>
+                <div class="dice" onclick="toggleHold(1)">?</div>
+                <div class="dice" onclick="toggleHold(2)">?</div>
+                <div class="dice" onclick="toggleHold(3)">?</div>
+                <div class="dice" onclick="toggleHold(4)">?</div>
+            </div>
+            <div id="controls">
+                <button class="btn" onclick="rollNewDice()">Roll Dice</button>
+                <button class="btn" onclick="resetTurn()">Reset Turn</button>
+                <button id="calculateScoreBtn" class="btn" style="display: none;" onclick="calculateFinalScore()">Bereken Score</button>
+            </div>
+        </section>
+
+        <section id="scoreboard">
+            <h2>Scorebord</h2>
+            <table>
+                <tbody>
+                    <tr><td>Eenen:</td><td id="eenen">0</td></tr>
+                    <tr><td>Tweeën:</td><td id="tweeën">0</td></tr>
+                    <tr><td>Drieën:</td><td id="drieën">0</td></tr>
+                    <tr><td>Vieren:</td><td id="vieren">0</td></tr>
+                    <tr><td>Vijfen:</td><td id="vijfen">0</td></tr>
+                    <tr><td>Zessen:</td><td id="zessen">0</td></tr>
+
+                    <tr><td colspan="2"><b>Speciale Score</b></td></tr>
+
+                    <tr><td>Three of a Kind:</td><td id="threeOfKind">0</td></tr>
+                    <tr><td>Four of a Kind:</td><td id="fourOfKind">0</td></tr>
+                    <tr><td>Full House:</td><td id="fullHouse">0</td></tr>
+                    <tr><td>Kleine Straat:</td><td id="kleineStraat">0</td></tr>
+                    <tr><td>Grote Straat:</td><td id="groteStraat">0</td></tr>
+                    <tr><td>Yahtzee:</td><td id="yahtzee">0</td></tr>
+                    <tr><td>Chance:</td><td id="chance">0</td></tr>
+
+                    <tr><td><b>Totaal:</b></td><td id="totaal">0</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <script src="Casper.js"></script>
+        </footer>
+    </body>
